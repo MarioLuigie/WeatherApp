@@ -1,0 +1,62 @@
+{
+    "panel" : {
+        "defaultCities" : [
+            {"name" : "Krakow", "region" : "poland"}, 
+            {"name" : "Zakopane", "region" : "poland"}, 
+            {"name" : "New York", "region" : "world"}, 
+            {"name" : "Barcelona", "region" : "europe"}, 
+            {"name" : "Tokyo", "region" : "world"},
+            {"name" : "Wrocław", "region" : "poland"},
+            {"name" : "Paris", "region" : "europe"},
+            {"name" : "Berlin", "region" : "europe"},
+            {"name" : "Praga", "region" : "europe"},
+            {"name" : "Split", "region" : "europe"},
+            {"name" : "Rio de Janeiro", "region" : "world"},
+            {"name" : "Los Angeles", "region" : "world"},
+            {"name" : "London", "region" : "europe"}
+        ]
+    },
+    "header": {
+        "title_1" : "Check",
+        "title_2" : "the",
+        "title_3" : "weather",
+        "subtitle" : "Your best aplication for checking weather!"
+    },
+    "main" : {
+        "input" : {
+            "title" : "check the weather below",
+            "placeholder" : "search city"
+        }
+    },
+    "footer" : {
+        "info" : {
+            "title" : "Info",
+            "rows" : [
+                "About us", 
+                "Blog", 
+                "OpenAplication for bussines", 
+                "Ask a question", 
+                "Tasks for the future"
+            ]
+        },
+        "terms" : {
+            "title" : "Terms & Conditions",
+            "rows" : [
+                "Terms and conditions of sale", 
+                "Privacy Policy", 
+                "Website terms and conditions"
+            ]
+        },
+        "company" : {
+            "title" : "Company",
+            "rows" : [
+                "The FullStack ARWcode is a group of skilled IT professionals and programming maestros who have been immersed in the art of fullstack development since 2023. From every corner of the digital realm, The FullStack ARWcode conjure up seamless applications, complete with enchanting frontends and powerful backends. The FullStack ARWcode harness their technical prowess to craft remarkable digital experiences."
+            ]
+        },
+        "signature" : {
+            "company": "ARWcode 2023 Powered by",
+            "friend" : "OpenWeatherMap",
+            "friendLink" : "https://openweathermap.org/"
+        }
+    }
+}

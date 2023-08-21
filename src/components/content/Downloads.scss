@@ -1,0 +1,15 @@
+.downloadsSection {
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+    gap: 17px;
+
+    &__googlePlayLogo {
+        // background-color: rgb(100, 128, 0);
+        width: 150px;
+
+    }
+}

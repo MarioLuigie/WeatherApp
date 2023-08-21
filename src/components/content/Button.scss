@@ -1,0 +1,9 @@
+.buttonSection {
+    display: flex;
+    justify-content: center;
+
+    &__button {
+        padding: 12px 0;
+        width: 100px;
+    }
+}

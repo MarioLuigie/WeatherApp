@@ -1,0 +1,35 @@
+.checkboxSection {
+    // background-color: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    padding-bottom: 15px;
+
+    @media screen and (min-width: 780px) {
+        padding-bottom: 0;
+        width: auto;
+    }
+}
+
+.radioWrapper {
+    font-size: 18px;
+    color: white;
+    display: flex;
+    // background-color: red;
+
+    &__radio {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__label {
+        cursor: pointer;
+    }
+
+    &__input {
+        cursor: pointer;
+    }
+}
+

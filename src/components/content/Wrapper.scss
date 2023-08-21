@@ -1,0 +1,21 @@
+@import "../../variables";
+
+.wrapper {
+    padding-top: $topPanelHeight_mobile;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-width: 400px;
+    max-width: 1200px;
+    background-color: $backgroundColor;
+    // padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 0 25px rgb(115, 115, 115);
+
+    @media screen and (min-width: 780px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: $topPanelHeight;
+    }
+}

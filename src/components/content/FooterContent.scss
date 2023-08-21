@@ -1,0 +1,49 @@
+@import "../../variables.scss";
+
+.footerContentGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media screen and (min-width: 780px) {
+        flex-wrap: nowrap;
+    }
+    
+}
+
+.footerContentSections {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    // background-color: red;
+
+    @media screen and (min-width: 780px) {
+        justify-content: flex-start;
+    }
+}
+
+.footerContentSection {
+    padding: 0 10px 20px;
+    // background-color: green;
+    min-width: 180px;
+    width: 100%;
+
+    &__title {
+        font-size: 16px;
+        font-weight: normal;
+        color: $normalTextColor;
+    }
+
+    &__text {
+        font-size: 12px;
+        color: $lighterTextColor;
+        text-decoration: underline;
+        padding-top: 12px;
+
+        &--justify {
+            text-align: justify;
+            text-decoration: none;
+        }
+    }
+}

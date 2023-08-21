@@ -1,0 +1,57 @@
+.waterInfoSection {
+    width: 100%;
+    // background-color: rgb(37, 37, 37);
+    padding-bottom: 35px;
+    padding-left: 9px;
+    max-height: 600px;
+    overflow: scroll;
+}
+
+.weatherInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: red;
+    padding: 15px;
+    width: 100%;
+    color: white;
+    font-weight: 400;
+    word-spacing: 2px;
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 21px;
+        padding: 4px 0;
+        font-weight: normal;
+        background-image:linear-gradient(to right, rgb(192, 192, 192), rgb(196, 196, 196));
+        width: 100%;
+        border-radius: 50px;
+        color: rgb(236, 236, 236);
+    }
+
+    &__dataWrapper {
+        // background-color: red;
+        display: flex;
+        gap: 35px;
+        padding-top: 10px;
+        color: rgb(24, 24, 24);
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+        padding-bottom: 3px;
+        color: rgb(129, 129, 129);
+        // background-color: red;
+
+        &--modify {
+            font-size: 20px;
+            text-align: center;
+            color: rgb(53, 53, 53);
+        }
+    }
+}
