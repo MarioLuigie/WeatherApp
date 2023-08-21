@@ -1,4 +1,5 @@
 import WeatherInfo from "./WeatherInfo";
+import AddCloseButtons from "./AddCloseButtons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudSun } from '@fortawesome/free-solid-svg-icons';
 import { faSun } from '@fortawesome/free-solid-svg-icons';
@@ -24,8 +25,10 @@ export default function Result ({
     // console.log("RESULT");
     return (
         <div className="resultSection">
-            <button onClick={clearResult}>close</button>
-            <button onClick={addCityToList}>Add to list</button>
+            <AddCloseButtons 
+                clearResult={clearResult}
+                addCityToList={addCityToList}
+            />
             <div className="resultSection__header">
                 <FontAwesomeIcon
                     icon={cityClouds >= 0 && cityClouds <= 30 

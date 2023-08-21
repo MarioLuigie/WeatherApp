@@ -17,13 +17,11 @@ export default function Header ({
     const [videoKey, setVideoKey] = useState(0);
   
     useEffect(() => {
-        if (cityClouds >= 0 && cityClouds <= 25) {
-            setVideoSource(sunVideo)
-        } else if (cityClouds < 70) {
-            setVideoSource(cloudsSunVideo)
-        } else {
-            setVideoSource(cloudsVideo)
-        }
+        cityClouds >= 0 && cityClouds <= 25 
+            ? setVideoSource(sunVideo)
+            : cityClouds < 70 
+            ? setVideoSource(cloudsSunVideo)
+            : setVideoSource(cloudsVideo)
         setVideoKey(videoKey + 1);
     }, [cityClouds]);
 

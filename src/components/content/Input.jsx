@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import "./Input.scss";
 
 export default function Input ({
@@ -26,7 +27,7 @@ export default function Input ({
                     onClick={clearInput}
                 />}
                 <button className='input__submitButton'>
-                    ok
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>
             </div>
         </div>
