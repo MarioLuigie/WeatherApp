@@ -23,7 +23,7 @@ export default function Wrapper ({
     cityGeneral,
     isDataCorrectly,
     clearResult,
-    addCityToList
+    openAddCloseModal,
 }) {
 
     return (
@@ -34,7 +34,6 @@ export default function Wrapper ({
                 enterPress={enterPress}
                 clearInput={clearInput}
                 city={city}
-                result={result}
                 nameCity={nameCity}
                 cityTemp={cityTemp}
                 cityTempFeelsLike={cityTempFeelsLike}
@@ -49,7 +48,7 @@ export default function Wrapper ({
                 cityGeneral={cityGeneral}
                 isDataCorrectly={isDataCorrectly}
                 clearResult={clearResult}
-                addCityToList={addCityToList}
+                openAddCloseModal={openAddCloseModal}
             />
             <Footer />
         </div>

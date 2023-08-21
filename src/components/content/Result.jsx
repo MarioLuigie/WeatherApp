@@ -20,14 +20,14 @@ export default function Result ({
     cityVisibility,
     cityGeneral,
     clearResult,
-    addCityToList
+    openAddCloseModal
 }) {
     // console.log("RESULT");
     return (
         <div className="resultSection">
             <AddCloseButtons 
                 clearResult={clearResult}
-                addCityToList={addCityToList}
+                openAddCloseModal={openAddCloseModal}
             />
             <div className="resultSection__header">
                 <FontAwesomeIcon

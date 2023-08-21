@@ -1,12 +1,13 @@
 import "./Select.scss";
 
 export default function Select ({
-    defaultCities,//lista miast z JSON
     selectCitiesList,//zaktualizowana lista miast uzytkownika
     enterPress,
     cityId,
-    disabledLabel
+    disabledLabel,
+    region
 }) {
+    // console.log(selectCitiesList);
 
     let filteredCities = selectCitiesList;
     if (cityId !== "all") {

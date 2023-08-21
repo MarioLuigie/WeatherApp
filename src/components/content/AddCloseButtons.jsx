@@ -6,7 +6,7 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function AddCloseButtons ({
     clearResult,
-    addCityToList
+    openAddCloseModal
 }) {
 
     return (
@@ -14,7 +14,7 @@ export default function AddCloseButtons ({
             <FontAwesomeIcon 
                 icon={faCirclePlus}
                 className="addCloseButtonsSection__button addCloseButtonsSection__button--add"
-                onClick={addCityToList}
+                onClick={openAddCloseModal}
             />
             <FontAwesomeIcon 
                 icon={faCircleXmark} 

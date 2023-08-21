@@ -2,11 +2,17 @@ import Select from "./Select";
 import CheckBox from "./CheckBox";
 import { useState } from "react";
 import "./Panel.scss";
+import AddCloseModal from "./AddCloseModal";
 
 export default function Panel ({
-    defaultCities,
     selectCitiesList,
-    enterPress
+    enterPress,
+    isModalActive,
+    setIsModalActive,
+    region,
+    changeRegionInput,
+    addCityToList,
+    closeAddCloseModal
 }) {
 
     const [polandSelected, setPolandSelected] = useState(true);
@@ -15,19 +21,20 @@ export default function Panel ({
     const [allSelected, setAllSelected] = useState(false);
     const [cityId, setCityId] = useState("poland");
 
+    //Change citiesList and active region check radio
     const handleChangeCitiesList = evt => {
         console.log("radio:", evt.target.id);
         const value = evt.target.value;
         const selectionMap = {
-            'europe': [true, false, false, false],
+            'poland': [true, false, false, false],
+            'europe': [false, true, false, false],
             'world': [false, false, true, false],
-            'poland': [false, true, false, false],
             'all':[false, false, false, true]
         };
     
-        const [europeSelected, polandSelected, worldSelected, allSelected] = selectionMap[value];
-        setEuropeSelected(europeSelected);
+        const [polandSelected, europeSelected, worldSelected, allSelected] = selectionMap[value];
         setPolandSelected(polandSelected);
+        setEuropeSelected(europeSelected);
         setWorldSelected(worldSelected);
         setAllSelected(allSelected);
         setCityId(value);
@@ -35,12 +42,19 @@ export default function Panel ({
 
     return (
         <div className="panelSection">
+            {isModalActive && <AddCloseModal 
+                setIsModalActive={setIsModalActive} 
+                region={region}
+                changeRegionInput={changeRegionInput}
+                addCityToList={addCityToList}
+                closeAddCloseModal={closeAddCloseModal}
+            />}
             <Select 
-                defaultCities={defaultCities}
                 selectCitiesList={selectCitiesList}
                 enterPress={enterPress} 
                 cityId={cityId}
                 disabledLabel="-select city-"
+                region={region}
             />
             <div className="checkboxSection">
                 <CheckBox 

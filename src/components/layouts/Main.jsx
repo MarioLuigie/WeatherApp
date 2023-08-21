@@ -7,7 +7,6 @@ export default function Main ({
     enterPress,
     clearInput,
     city, 
-    result,
     nameCity,
     cityTemp,
     cityTempFeelsLike,
@@ -22,7 +21,7 @@ export default function Main ({
     cityGeneral,
     isDataCorrectly,
     clearResult,
-    addCityToList
+    openAddCloseModal,
 }) {
 
     return (
@@ -47,7 +46,7 @@ export default function Main ({
                 cityVisibility={cityVisibility}
                 cityGeneral={cityGeneral}
                 clearResult={clearResult}
-                addCityToList={addCityToList}
+                openAddCloseModal={openAddCloseModal}
             />}
         </main>
     )

@@ -11,6 +11,7 @@ export default function App() {
 
   //FLAGS
   const [isDataCorrectly, setIsDataCorrectly] = useState(false);
+  const [isModalActive, setIsModalActive] = useState(false);
 
   //BASE
   const [selectCitiesList, setselectCitiesList] = useState(defaultCities);
@@ -18,6 +19,7 @@ export default function App() {
   const [result, setResult] = useState("");
   const [nameCity, setNameCity] = useState("");
   const [cityCoord, setCityCoord] = useState({});
+  const [region, setRegion] = useState("");
 
   //TEMP
   const [cityTemp, setCityTemp] = useState("");
@@ -78,6 +80,10 @@ export default function App() {
     .catch(err => console.log(`${err} something went wrong`));
   }
 
+  const handleChangeRegionInput = evt => {
+    setRegion(evt.target.value);
+  }
+
   const handleClearInput = () => {
     setCity("");
   }
@@ -92,8 +98,20 @@ export default function App() {
 
   const handleAddCityToList = () => {
     console.log("city added to list");
-    const newCity = {name : result}
-    setselectCitiesList([...defaultCities, newCity])
+    const newCity = {name : result, region : region};
+    defaultCities.push(newCity);
+    setselectCitiesList(defaultCities);
+    setIsModalActive(false);
+    setRegion("");
+  }
+
+  const handleOpenModal = () => {
+    setIsModalActive(true);
+  }
+
+  const handleCloseModal = () => {
+    setIsModalActive(false);
+    setRegion("");
   }
 
   const handleEnterPressInput = evt => {
@@ -126,9 +144,14 @@ export default function App() {
   return (
     <>
       <Panel 
-        defaultCities={defaultCities}
         selectCitiesList={selectCitiesList} 
         enterPress={handleEnterPressSelect}
+        isModalActive={isModalActive}
+        setIsModalActive={setIsModalActive}
+        region={region}
+        changeRegionInput={handleChangeRegionInput}
+        addCityToList={handleAddCityToList}
+        closeAddCloseModal={handleCloseModal}
       />
       <Wrapper 
         cityChange={handleChangeInput}
@@ -150,7 +173,7 @@ export default function App() {
         cityGeneral={cityGeneral}
         isDataCorrectly={isDataCorrectly}
         clearResult={handleClearResult}
-        addCityToList={handleAddCityToList}
+        openAddCloseModal={handleOpenModal}
       />
       {isDataCorrectly && <div>lon: {cityCoord.lon} lat: {cityCoord.lat}</div>}
     </>
