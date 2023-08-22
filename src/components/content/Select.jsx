@@ -5,7 +5,6 @@ export default function Select ({
     enterPress,
     cityId,
     disabledLabel,
-    region
 }) {
     // console.log(selectCitiesList);
 

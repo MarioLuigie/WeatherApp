@@ -33,6 +33,7 @@ export default function Panel ({
         };
     
         const [polandSelected, europeSelected, worldSelected, allSelected] = selectionMap[value];
+        
         setPolandSelected(polandSelected);
         setEuropeSelected(europeSelected);
         setWorldSelected(worldSelected);
@@ -54,7 +55,6 @@ export default function Panel ({
                 enterPress={enterPress} 
                 cityId={cityId}
                 disabledLabel="-select city-"
-                region={region}
             />
             <div className="checkboxSection">
                 <CheckBox 
